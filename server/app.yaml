@@ -1,0 +1,17 @@
+runtime: nodejs
+env: flex
+
+service: default
+
+entrypoint: node app.js
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 10 # Change this value to the desired maximum number of instances
+  cool_down_period_sec: 180
+  cpu_utilization:
+    target_utilization: 0.7
+
+handlers:
+  - url: /.*
+    script: auto

@@ -1,0 +1,4 @@
+server/service-account
+server/firebaseConfig.js
+server/firebaseAdmin.js
+.env
